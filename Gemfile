@@ -33,6 +33,7 @@ group :test do
   gem 'puffing-billy'
   gem 'thin'
   gem 'webmock'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
