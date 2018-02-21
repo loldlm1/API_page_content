@@ -1,4 +1,1 @@
-<h1>Visitors#index</h1>
-<p>Find me in app/views/visitors/index.html.erb</p>
-
-<%= link_to "Content", api_content_path %>
+<%= MarkdownService.render(File.open('README.md', 'rb').read) %>

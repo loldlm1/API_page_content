@@ -12,6 +12,9 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
+gem 'redcarpet'
+gem 'rouge'
+gem 'github-css-rails', '~> 1.1.3'
 # HTML parser
 gem 'nokogiri', '~> 1.8', '>= 1.8.2'
 # HTTP and REST client for Ruby
