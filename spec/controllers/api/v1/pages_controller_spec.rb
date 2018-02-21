@@ -14,7 +14,7 @@ RSpec.resource 'Pages' do
     )
   end
 
-  post 'api/v1/create' do
+  post 'api/v1/pages' do
     parameter :url, 'url'
     let(:url) { 'www.testweb.com' }
     let(:raw_post) { params.to_json }
@@ -32,7 +32,7 @@ RSpec.resource 'Pages' do
     end
   end
 
-  get '/api/v1/index' do
+  get '/api/v1/pages' do
     let(:content_html_1) {
       {
         h1: ['a'],
