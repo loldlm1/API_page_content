@@ -12,16 +12,12 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
 # HTML parser
 gem 'nokogiri', '~> 1.8', '>= 1.8.2'
 # HTTP and REST client for Ruby
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 # Allows cross-origin request
 gem 'rack-cors'
-# Serializer
-gem 'active_model_serializers'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -31,6 +27,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker', '~> 1.7.1'
   gem 'rspec-rails'
+  gem 'rspec_api_documentation'
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers', '~> 1.1.1'
   gem 'better_errors'

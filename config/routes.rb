@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'visitors/index'
+  root to: 'visitors#index'
 
   namespace :api do
     namespace :v1 do
-      post 'page' => 'pages#store_content'
-      get 'urls' => 'pages#urls'
+      resources :pages, only: [:create, :index]
     end
   end
 end

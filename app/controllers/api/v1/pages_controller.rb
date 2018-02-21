@@ -1,16 +1,27 @@
 class Api::V1::PagesController < Api::V1::ApiController
-  def store_content
-    store_content = Page.parse_content_and_save(params['url'])
+  def create
+    page = Page.new(page_params)
 
-    render json: {
-      page: {
-        url: store_content.url,
-        content: store_content.content
-      }
-    }
+    if page.save
+      render json: hash_for([page])
+    else
+      render json: page.errors.messages
+    end
   end
 
   def index
-    render json: Page.all
+    render json: hash_for(Page.all)
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:url)
+  end
+
+  def hash_for(pages)
+    pages.map do |p|
+      { url: p.url, content: p.content }
+    end
   end
 end

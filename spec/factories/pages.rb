@@ -1,5 +1,13 @@
 FactoryBot.define do
   factory :page do
-    content '<h1>hello</h1><br><h2>world</h2><br><h3>!!</h3><br><a href="google.com">the best tool</a>'
+    url 'www.google.com'
+    content {
+      {
+        h1: ['a'],
+        h2: ['b'],
+        h3: ['c'],
+        link: ['click here']
+      }
+    }
   end
 end
